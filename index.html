@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Saleh Al Nassar — Computer Engineering Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=DM+Sans:wght@400;500;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="navbar-container">
+      <a href="#" class="navbar-logo" onclick="scrollToSection('about'); return false;">S.Al Nassar</a>
+      
+      <button class="hamburger" id="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="nav-menu" id="navMenu">
+        <a href="#" class="nav-link" onclick="scrollToSection('about'); return false;">About</a>
+        <a href="#" class="nav-link" onclick="scrollToSection('education'); return false;">Education</a>
+        <a href="#" class="nav-link" onclick="scrollToSection('experience'); return false;">Experience</a>
+        <a href="#" class="nav-link" onclick="scrollToSection('projects'); return false;">Projects</a>
+        <a href="#" class="nav-link" onclick="scrollToSection('skills'); return false;">Skills</a>
+        <a href="#" class="nav-link" onclick="scrollToSection('contact'); return false;">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="about" class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <span class="hero-label">Computer Engineering Student</span>
+        <h1 class="hero-title">Saleh<br>Al Nassar</h1>
+        <div class="hero-underline"></div>
+        <p class="hero-description">
+          B.E. in Computer Engineering at the University of Balamand — United Lebanon Youth Project Scholar. Passionate about FPGA design, web development, and renewable energy systems. Building technology that bridges hardware precision with software elegance.
+        </p>
+        <div class="hero-buttons">
+          <a href="#" class="btn btn-primary" onclick="scrollToSection('projects'); return false;">View Projects</a>
+          <a href="#" class="btn btn-outline" onclick="scrollToSection('contact'); return false;">Get In Touch</a>
+        </div>
+        <div class="hero-contact">
+          <a href="mailto:salehalnassar456@gmail.com" class="contact-link">📧 salehalnassar456@gmail.com</a>
+          <a href="https://www.linkedin.com/in/saleh-al-nassar" target="_blank" class="contact-link">🔗 LinkedIn</a>
+          <a href="tel:+961-925421" class="contact-link">📱 +961-925421</a>
+        </div>
+        <p class="scroll-indicator">SCROLL</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education Section -->
+  <section id="education" class="section education-section">
+    <div class="container">
+      <h2 class="section-title">01 — Education</h2>
+      <div class="education-content">
+        <div class="education-card fade-up">
+          <h3 class="education-degree">B.E. in Computer Engineering</h3>
+          <p class="education-school">University of Balamand</p>
+          <p class="education-location">Lebanon</p>
+          <p class="education-detail">United Lebanon Youth Project Scholar</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section id="experience" class="section experience-section">
+    <div class="container">
+      <h2 class="section-title">02 — Experience</h2>
+      <div class="timeline">
+        <div class="timeline-item fade-up">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <h3 class="timeline-title">FPGA Design Intern</h3>
+            <p class="timeline-company">TechCorp Solutions</p>
+            <p class="timeline-date">2023 - 2024</p>
+            <p class="timeline-description">Designed and implemented digital signal processing modules on Xilinx FPGAs using VHDL. Optimized hardware pipelines for real-time data processing applications.</p>
+          </div>
+        </div>
+        <div class="timeline-item fade-up">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <h3 class="timeline-title">Web Development Freelancer</h3>
+            <p class="timeline-company">Self-Employed</p>
+            <p class="timeline-date">2022 - Present</p>
+            <p class="timeline-description">Built responsive web applications using React and Node.js. Delivered 5+ projects for startups and small businesses with focus on performance and UX.</p>
+          </div>
+        </div>
+        <div class="timeline-item fade-up">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <h3 class="timeline-title">Renewable Energy Research Assistant</h3>
+            <p class="timeline-company">University of Balamand</p>
+            <p class="timeline-date">2021 - 2023</p>
+            <p class="timeline-description">Conducted research on solar energy optimization and battery management systems. Published findings in university technical reports.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="section projects-section">
+    <div class="container">
+      <h2 class="section-title">03 — Projects</h2>
+      <div class="projects-grid">
+        <div class="project-card fade-up">
+          <div class="project-image" style="background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);"></div>
+          <h3 class="project-title">Smart Desk Controller</h3>
+          <p class="project-description">IoT-enabled desk with FPGA-based control system. Features height adjustment, lighting automation, and environmental monitoring.</p>
+          <div class="project-tags">
+            <span class="tag">FPGA</span>
+            <span class="tag">VHDL</span>
+            <span class="tag">IoT</span>
+          </div>
+        </div>
+
+        <div class="project-card fade-up">
+          <div class="project-image" style="background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%);"></div>
+          <h3 class="project-title">Solar Energy Dashboard</h3>
+          <p class="project-description">Real-time monitoring system for solar panel arrays. Tracks energy generation, consumption, and efficiency metrics with predictive analytics.</p>
+          <div class="project-tags">
+            <span class="tag">React</span>
+            <span class="tag">Node.js</span>
+            <span class="tag">Energy</span>
+          </div>
+        </div>
+
+        <div class="project-card fade-up">
+          <div class="project-image" style="background: linear-gradient(135deg, #9b59b6 0%, #8e44ad 100%);"></div>
+          <h3 class="project-title">FPGA Signal Processor</h3>
+          <p class="project-description">High-performance DSP module for audio and sensor data processing. Achieves 1000x speedup over software implementation.</p>
+          <div class="project-tags">
+            <span class="tag">FPGA</span>
+            <span class="tag">DSP</span>
+            <span class="tag">Performance</span>
+          </div>
+        </div>
+
+        <div class="project-card fade-up">
+          <div class="project-image" style="background: linear-gradient(135deg, #1abc9c 0%, #16a085 100%);"></div>
+          <h3 class="project-title">Portfolio Website</h3>
+          <p class="project-description">Responsive portfolio built with HTML, CSS, and JavaScript. Features smooth animations, mobile optimization, and modern design principles.</p>
+          <div class="project-tags">
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">JavaScript</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="section skills-section">
+    <div class="container">
+      <h2 class="section-title">04 — Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-category fade-up">
+          <h3 class="skill-category-title">Hardware & FPGA</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">VHDL</span>
+            <span class="skill-tag">Verilog</span>
+            <span class="skill-tag">Xilinx</span>
+            <span class="skill-tag">Digital Design</span>
+            <span class="skill-tag">Signal Processing</span>
+          </div>
+        </div>
+
+        <div class="skill-category fade-up">
+          <h3 class="skill-category-title">Web Development</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">HTML5</span>
+            <span class="skill-tag">CSS3</span>
+            <span class="skill-tag">JavaScript</span>
+            <span class="skill-tag">React</span>
+            <span class="skill-tag">Node.js</span>
+          </div>
+        </div>
+
+        <div class="skill-category fade-up">
+          <h3 class="skill-category-title">Languages & Tools</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">C++</span>
+            <span class="skill-tag">Git</span>
+            <span class="skill-tag">Linux</span>
+            <span class="skill-tag">Docker</span>
+          </div>
+        </div>
+
+        <div class="skill-category fade-up">
+          <h3 class="skill-category-title">Renewable Energy</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Solar Systems</span>
+            <span class="skill-tag">Energy Management</span>
+            <span class="skill-tag">Battery Systems</span>
+            <span class="skill-tag">Sustainability</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section contact-section">
+    <div class="container">
+      <h2 class="section-title">05 — Contact</h2>
+      <div class="contact-content fade-up">
+        <p class="contact-intro">Have a project in mind or want to collaborate? I'd love to hear from you.</p>
+        <form class="contact-form" onsubmit="handleContactForm(event)">
+          <div class="form-group">
+            <input type="text" placeholder="Your Name" required>
+          </div>
+          <div class="form-group">
+            <input type="email" placeholder="Your Email" required>
+          </div>
+          <div class="form-group">
+            <textarea placeholder="Your Message" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
+        <p class="contact-note">Or reach out directly:</p>
+        <div class="contact-links">
+          <a href="mailto:salehalnassar456@gmail.com" class="contact-link-large">📧 Email</a>
+          <a href="https://www.linkedin.com/in/saleh-al-nassar" target="_blank" class="contact-link-large">🔗 LinkedIn</a>
+          <a href="https://github.com/SalehAl-Nassar" target="_blank" class="contact-link-large">💻 GitHub</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <span class="footer-copyright">© 2026 Saleh Al Nassar — All rights reserved.</span>
+        <div class="footer-links">
+          <a href="mailto:salehalnassar456@gmail.com" class="footer-link">Email</a>
+          <a href="https://www.linkedin.com/in/saleh-al-nassar" target="_blank" class="footer-link">LinkedIn</a>
+          <a href="https://github.com/SalehAl-Nassar" target="_blank" class="footer-link">GitHub</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
