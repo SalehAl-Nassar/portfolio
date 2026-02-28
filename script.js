@@ -1,5 +1,3 @@
-
-
 const hamburger = document.getElementById('hamburger');
 const navMenu = document.getElementById('navMenu');
 const navbar = document.querySelector('.navbar');
@@ -29,7 +27,6 @@ window.addEventListener('scroll', () => {
 function scrollToSection(sectionId) {
   const section = document.getElementById(sectionId);
   if (!section) return;
-
   const offsetTop = section.offsetTop - 80;
   window.scrollTo({ top: offsetTop, behavior: 'smooth' });
 }
@@ -58,7 +55,6 @@ document.querySelectorAll('.fade-up').forEach(el => {
 // Contact form handling -> opens mail client
 function handleContactForm(event) {
   event.preventDefault();
-
   const form = event.target;
   const name = form.querySelector('input[type="text"]').value.trim();
   const email = form.querySelector('input[type="email"]').value.trim();
@@ -91,7 +87,6 @@ function showNotification(message) {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   `;
   notification.textContent = message;
-
   document.body.appendChild(notification);
 
   setTimeout(() => {
