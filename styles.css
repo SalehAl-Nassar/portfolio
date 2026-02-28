@@ -300,18 +300,17 @@ body {
    ============================================================ */
 .experience-section { background: white; }
 
-/* Key fix: give enough left padding so dot never overlaps text */
 .timeline {
   position: relative;
-  padding-left: 3.25rem;
+  padding-left: 3.25rem;      /* space for line + dot */
   max-width: 900px;
 }
 
-/* Vertical line */
+/* vertical line */
 .timeline::before {
   content: '';
   position: absolute;
-  left: 1rem;
+  left: 1rem;                 /* x-position of line */
   top: 0;
   bottom: 0;
   width: 2px;
@@ -323,10 +322,22 @@ body {
   margin-bottom: 2.75rem;
 }
 
+/* IMPORTANT: make content the reference point */
+.timeline-content {
+  position: relative;
+  padding-top: 0;             /* keep clean */
+}
+
+/* place marker aligned with the title line */
 .timeline-marker {
   position: absolute;
+
+  /* x: center on the vertical line */
   left: calc(1rem - 9px);
-  top: 0.55rem;
+
+  /* y: align with the job title text */
+  top: 0.35rem;
+
   width: 18px;
   height: 18px;
   background: var(--accent);
@@ -335,7 +346,20 @@ body {
   box-shadow: 0 0 0 2px var(--border);
 }
 
-.timeline-content { padding-top: 0.1rem; }
+/* move marker with content, not page */
+.timeline-item .timeline-marker {
+  /* attach it to the content block */
+  top: 0.55rem;               /* adjust this number if needed */
+}
+
+/* Make sure text never goes under the marker */
+.timeline-title,
+.timeline-company,
+.timeline-date,
+.timeline-bullets {
+  position: relative;
+  z-index: 1;
+}
 
 .timeline-title {
   font-family: 'Playfair Display', serif;
@@ -368,7 +392,6 @@ body {
   margin-bottom: 0.4rem;
   line-height: 1.7;
 }
-
 /* ============================================================
    PROJECTS (clean cards, no image blocks)
    ============================================================ */
