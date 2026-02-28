@@ -177,9 +177,8 @@ body {
   letter-spacing: -1px;
 }
 
-/* ✅ Make "Al Nassar" red (wrap in HTML: <span class="hero-lastname">Al Nassar</span>) */
 .hero-lastname {
-  color: var(--accent);
+  color: var(--accent) !important;
 }
 
 .hero-underline {
@@ -309,48 +308,30 @@ body {
 }
 
 /* ============================================================
-   EXPERIENCE (Marker placement + text spacing FIXED)
+   EXPERIENCE — CLEAN VERSION (NO DOTS)
    ============================================================ */
-.experience-section { background: white; }
 
-.timeline {
-  position: relative;
-  padding-left: 3.9rem;   /* more space so dot never hits title */
-  max-width: 950px;
+.experience-section {
+  background: white;
 }
 
-/* vertical line */
-.timeline::before {
-  content: '';
-  position: absolute;
-  left: 1.25rem;
-  top: 0;
-  bottom: 0;
-  width: 2px;
-  background: var(--border);
+.timeline {
+  max-width: 900px;
+  margin-left: 1rem;
+  padding-left: 0;
+  border-left: 2px solid var(--border);   /* vertical line on left */
+  padding-left: 2rem;                     /* space from line */
 }
 
 .timeline-item {
-  position: relative;
-  margin-bottom: 3rem;
+  padding-bottom: 2.5rem;
+  margin-bottom: 2.5rem;
+  border-bottom: 1px solid var(--border); /* horizontal divider */
 }
 
-/* marker */
-.timeline-marker {
-  position: absolute;
-  left: calc(1.25rem - 9px);  /* center marker on line */
-  top: 0.7rem;                /* align with title line */
-  width: 18px;
-  height: 18px;
-  background: var(--accent);
-  border: 3px solid white;
-  border-radius: 50%;
-  box-shadow: 0 0 0 2px var(--border);
-}
-
-/* push content slightly right to avoid overlap */
-.timeline-content {
-  margin-left: 0.4rem;
+.timeline-item:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
 }
 
 .timeline-title {
@@ -358,6 +339,7 @@ body {
   font-size: 1.25rem;
   font-weight: 700;
   margin-bottom: 0.25rem;
+  color: var(--text-dark);
 }
 
 .timeline-company {
@@ -384,7 +366,6 @@ body {
   margin-bottom: 0.5rem;
   line-height: 1.8;
 }
-
 /* ============================================================
    PROJECTS (clean cards)
    ============================================================ */
