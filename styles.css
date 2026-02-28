@@ -481,24 +481,20 @@ body {
 /* ============================================================
    CONTACT (Redesigned to match screenshot)
    ============================================================ */
+
+
 .contact-section {
-  background: radial-gradient(1200px 600px at 20% 20%, rgba(255,255,255,0.06), transparent 55%),
-              linear-gradient(180deg, var(--navy) 0%, var(--navy-2) 100%);
-  color: white;
-  position: relative;
-  overflow: hidden;
+  background: linear-gradient(180deg, #071424 0%, #06101c 100%);
+  color: rgba(255,255,255,0.9);
 }
 
-/* big faded section number like screenshot */
 .contact-section .section-title {
-  color: rgba(255,255,255,0.10);
+  color: rgba(255,255,255,0.12);
   font-size: 6rem;
-  margin-bottom: 1.5rem;
-  letter-spacing: -1px;
+  margin-bottom: 2rem;
 }
 
-/* "Get in Touch" text (you can keep your H2 and add a subtitle if you want) */
-.contact-content {
+.contact-wrap {
   display: grid;
   grid-template-columns: 1fr 1.2fr;
   gap: 3rem;
@@ -506,29 +502,22 @@ body {
   max-width: 1100px;
 }
 
-/* left block */
-.contact-left h3 {
+.contact-heading {
   font-family: 'Playfair Display', serif;
   font-size: 3.2rem;
   line-height: 1.05;
   margin-bottom: 1rem;
-  color: rgba(255,255,255,0.92);
+  color: rgba(255,255,255,0.95);
 }
 
 .contact-intro {
-  font-size: 1.05rem;
-  line-height: 1.8;
   color: rgba(255,255,255,0.65);
-  margin-bottom: 2.5rem;
+  line-height: 1.8;
+  margin-bottom: 2rem;
   max-width: 520px;
 }
 
-/* contact rows */
-.contact-info {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
+.contact-info { display: flex; flex-direction: column; gap: 1.4rem; }
 
 .info-row {
   display: grid;
@@ -540,12 +529,12 @@ body {
 .info-icon {
   width: 52px;
   height: 52px;
-  border: 1px solid var(--navy-border);
+  border: 1px solid rgba(255,255,255,0.12);
   display: grid;
   place-items: center;
   color: var(--accent);
   border-radius: 2px;
-  font-size: 1.1rem;
+  font-weight: 800;
 }
 
 .info-text small {
@@ -554,32 +543,20 @@ body {
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: rgba(255,255,255,0.45);
-  margin-bottom: 0.25rem;
   font-size: 0.75rem;
+  margin-bottom: 0.25rem;
 }
 
 .info-text a,
 .info-text span {
-  color: rgba(255,255,255,0.88);
+  color: rgba(255,255,255,0.9);
   text-decoration: none;
   font-weight: 600;
 }
 
-.info-text a:hover { color: white; }
+.info-text a:hover { color: #ffffff; }
 
-/* right form */
-.contact-form {
-  background: transparent;
-  border: none;
-  padding: 0;
-  margin: 0;
-}
-
-.form-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 1.25rem;
-}
+.contact-form { display: flex; flex-direction: column; gap: 1.25rem; }
 
 .field label {
   display: block;
@@ -595,17 +572,11 @@ body {
 .field textarea {
   width: 100%;
   padding: 1rem 1.1rem;
-  border: 1px solid var(--navy-border);
+  border: 1px solid rgba(255,255,255,0.12);
   background: rgba(255,255,255,0.03);
-  color: rgba(255,255,255,0.88);
-  font-size: 0.95rem;
+  color: rgba(255,255,255,0.9);
   border-radius: 2px;
   outline: none;
-}
-
-.field input::placeholder,
-.field textarea::placeholder {
-  color: rgba(255,255,255,0.35);
 }
 
 .field input:focus,
@@ -615,23 +586,25 @@ body {
 }
 
 .contact-send {
-  margin-top: 0.75rem;
+  margin-top: 0.5rem;
   padding: 1rem 1.2rem;
   width: 100%;
   border: none;
   background: #8f3f24;
   color: rgba(255,255,255,0.95);
-  font-weight: 700;
+  font-weight: 800;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   cursor: pointer;
   border-radius: 2px;
-  transition: transform 0.2s ease, background 0.2s ease;
 }
 
-.contact-send:hover {
-  background: var(--accent);
-  transform: translateY(-1px);
+.contact-send:hover { background: var(--accent); }
+
+@media (max-width: 900px) {
+  .contact-wrap { grid-template-columns: 1fr; }
+  .contact-section .section-title { font-size: 4.5rem; }
+  .contact-heading { font-size: 2.6rem; }
 }
 
 /* ============================================================
@@ -734,65 +707,4 @@ body {
   .section { padding: 4rem 0; }
 }
 
-/* ============================================================
-   NOTE: Required small HTML edits (2 lines)
-   1) Hero title:
-      <h1 class="hero-title">Saleh<br><span class="hero-lastname">Al Nassar</span></h1>
 
-   2) Contact section HTML structure:
-      Replace your current contact-content with:
-
-      <div class="contact-content fade-up">
-        <div class="contact-left">
-          <h3>Get in Touch</h3>
-          <p class="contact-intro">Whether you have a project in mind, a question, or just want to connect — I'd love to hear from you.</p>
-
-          <div class="contact-info">
-            <div class="info-row">
-              <div class="info-icon">✉</div>
-              <div class="info-text">
-                <small>Email</small>
-                <a href="mailto:salehalnassar456@gmail.com">salehalnassar456@gmail.com</a>
-              </div>
-            </div>
-
-            <div class="info-row">
-              <div class="info-icon">in</div>
-              <div class="info-text">
-                <small>LinkedIn</small>
-                <a href="https://www.linkedin.com/in/saleh-al-nassar" target="_blank">Saleh Al Nassar</a>
-              </div>
-            </div>
-
-            <div class="info-row">
-              <div class="info-icon">☎</div>
-              <div class="info-text">
-                <small>Phone</small>
-                <span>81-925421</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <form class="contact-form" onsubmit="handleContactForm(event)">
-          <div class="form-grid">
-            <div class="field">
-              <label>NAME</label>
-              <input type="text" placeholder="Your full name" required>
-            </div>
-
-            <div class="field">
-              <label>EMAIL</label>
-              <input type="email" placeholder="your@email.com" required>
-            </div>
-
-            <div class="field">
-              <label>MESSAGE</label>
-              <textarea placeholder="Tell me about your project or inquiry..." rows="6" required></textarea>
-            </div>
-
-            <button type="submit" class="contact-send">Send Message</button>
-          </div>
-        </form>
-      </div>
-   ============================================================ */
