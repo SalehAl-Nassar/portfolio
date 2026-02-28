@@ -306,15 +306,8 @@ body {
   max-width: 900px;
 }
 
-/* vertical line */
 .timeline::before {
-  content: '';
-  position: absolute;
-  left: 1rem;                 /* x-position of line */
-  top: 0;
-  bottom: 0;
-  width: 2px;
-  background: var(--border);
+  left: 1rem;
 }
 
 .timeline-item {
@@ -324,8 +317,8 @@ body {
 
 /* IMPORTANT: make content the reference point */
 .timeline-content {
-  position: relative;
-  padding-top: 0;             /* keep clean */
+    margin-left: 1.5rem;   /* try 1.5rem–2rem */
+             /* keep clean */
 }
 
 /* place marker aligned with the title line */
@@ -336,7 +329,7 @@ body {
   left: calc(1rem - 9px);
 
   /* y: align with the job title text */
-  top: 0.35rem;
+  top: 0.55rem;
 
   width: 18px;
   height: 18px;
