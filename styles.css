@@ -481,130 +481,85 @@ body {
 /* ============================================================
    CONTACT (Redesigned to match screenshot)
    ============================================================ */
+/* ============================================================
+   CONTACT FIX PACK (force dark like screenshot)
+   Paste at END of CSS
+   ============================================================ */
 
-
-.contact-section {
-  background: linear-gradient(180deg, #071424 0%, #06101c 100%);
-  color: rgba(255,255,255,0.9);
+#contact.contact-section {
+  background: linear-gradient(180deg, #071424 0%, #06101c 100%) !important;
+  color: rgba(255,255,255,0.9) !important;
 }
 
-.contact-section .section-title {
-  color: rgba(255,255,255,0.12);
-  font-size: 6rem;
-  margin-bottom: 2rem;
+/* Make all text inside contact readable */
+#contact.contact-section * {
+  color: inherit;
 }
 
-.contact-wrap {
-  display: grid;
-  grid-template-columns: 1fr 1.2fr;
-  gap: 3rem;
-  align-items: start;
-  max-width: 1100px;
+/* Big faded section title (05 — Contact) */
+#contact.contact-section .section-title {
+  color: rgba(255,255,255,0.12) !important;
 }
 
-.contact-heading {
-  font-family: 'Playfair Display', serif;
-  font-size: 3.2rem;
-  line-height: 1.05;
-  margin-bottom: 1rem;
-  color: rgba(255,255,255,0.95);
+/* The "Get in Touch" heading */
+#contact.contact-section .contact-heading {
+  color: rgba(255,255,255,0.95) !important;
 }
 
-.contact-intro {
-  color: rgba(255,255,255,0.65);
-  line-height: 1.8;
-  margin-bottom: 2rem;
-  max-width: 520px;
+/* Paragraph text */
+#contact.contact-section .contact-intro {
+  color: rgba(255,255,255,0.65) !important;
 }
 
-.contact-info { display: flex; flex-direction: column; gap: 1.4rem; }
-
-.info-row {
-  display: grid;
-  grid-template-columns: 52px 1fr;
-  gap: 1rem;
-  align-items: center;
+/* Labels */
+#contact.contact-section .field label,
+#contact.contact-section .info-text small {
+  color: rgba(255,255,255,0.45) !important;
 }
 
-.info-icon {
-  width: 52px;
-  height: 52px;
-  border: 1px solid rgba(255,255,255,0.12);
-  display: grid;
-  place-items: center;
-  color: var(--accent);
-  border-radius: 2px;
-  font-weight: 800;
+/* Inputs */
+#contact.contact-section input,
+#contact.contact-section textarea {
+  background: rgba(255,255,255,0.03) !important;
+  border: 1px solid rgba(255,255,255,0.12) !important;
+  color: rgba(255,255,255,0.9) !important;
 }
 
-.info-text small {
-  display: block;
-  font-family: 'DM Mono', monospace;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: rgba(255,255,255,0.45);
-  font-size: 0.75rem;
-  margin-bottom: 0.25rem;
+#contact.contact-section input::placeholder,
+#contact.contact-section textarea::placeholder {
+  color: rgba(255,255,255,0.35) !important;
 }
 
-.info-text a,
-.info-text span {
-  color: rgba(255,255,255,0.9);
+#contact.contact-section input:focus,
+#contact.contact-section textarea:focus {
+  border-color: rgba(200,90,58,0.7) !important;
+  box-shadow: 0 0 0 4px rgba(200,90,58,0.12) !important;
+}
+
+/* Left info boxes/icons */
+#contact.contact-section .info-icon {
+  border: 1px solid rgba(255,255,255,0.12) !important;
+  color: var(--accent) !important;
+}
+
+/* Links */
+#contact.contact-section a {
+  color: rgba(255,255,255,0.88) !important;
   text-decoration: none;
-  font-weight: 600;
 }
 
-.info-text a:hover { color: #ffffff; }
-
-.contact-form { display: flex; flex-direction: column; gap: 1.25rem; }
-
-.field label {
-  display: block;
-  font-family: 'DM Mono', monospace;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: rgba(255,255,255,0.45);
-  font-size: 0.75rem;
-  margin-bottom: 0.5rem;
+#contact.contact-section a:hover {
+  color: #ffffff !important;
 }
 
-.field input,
-.field textarea {
-  width: 100%;
-  padding: 1rem 1.1rem;
-  border: 1px solid rgba(255,255,255,0.12);
-  background: rgba(255,255,255,0.03);
-  color: rgba(255,255,255,0.9);
-  border-radius: 2px;
-  outline: none;
+/* Send button */
+#contact.contact-section .contact-send {
+  background: #8f3f24 !important;
+  color: rgba(255,255,255,0.95) !important;
 }
 
-.field input:focus,
-.field textarea:focus {
-  border-color: rgba(200,90,58,0.7);
-  box-shadow: 0 0 0 4px rgba(200,90,58,0.12);
-}
-
-.contact-send {
-  margin-top: 0.5rem;
-  padding: 1rem 1.2rem;
-  width: 100%;
-  border: none;
-  background: #8f3f24;
-  color: rgba(255,255,255,0.95);
-  font-weight: 800;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  cursor: pointer;
-  border-radius: 2px;
-}
-
-.contact-send:hover { background: var(--accent); }
-
-@media (max-width: 900px) {
-  .contact-wrap { grid-template-columns: 1fr; }
-  .contact-section .section-title { font-size: 4.5rem; }
-  .contact-heading { font-size: 2.6rem; }
+#contact.contact-section .contact-send:hover {
+  background: var(--accent) !important;
 }
 
 /* ============================================================
