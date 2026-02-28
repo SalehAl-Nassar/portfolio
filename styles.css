@@ -307,39 +307,44 @@ body {
   font-style: italic;
 }
 
+
 /* ============================================================
-   EXPERIENCE — CLEAN VERSION (NO DOTS)
+   EXPERIENCE — NO DOTS (LINE + DIVIDERS)
    ============================================================ */
 
-.experience-section {
-  background: white;
+.timeline {
+  max-width: 950px;
+  margin-left: 0.5rem;
+  padding-left: 2rem;
+  border-left: 2px solid var(--border); /* vertical line */
 }
 
-.timeline {
-  max-width: 900px;
-  margin-left: 1rem;
-  padding-left: 0;
-  border-left: 2px solid var(--border);   /* vertical line on left */
-  padding-left: 2rem;                     /* space from line */
-}
+.timeline::before { content: none !important; } /* kill old line if exists */
+
+.timeline-marker { display: none !important; }  /* kill dots no matter what */
 
 .timeline-item {
   padding-bottom: 2.5rem;
   margin-bottom: 2.5rem;
-  border-bottom: 1px solid var(--border); /* horizontal divider */
+  border-bottom: 1px solid var(--border); /* divider between experiences */
 }
 
 .timeline-item:last-child {
   border-bottom: none;
   margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.timeline-content {
+  margin-left: 0; /* no offset needed now */
 }
 
 .timeline-title {
   font-family: 'Playfair Display', serif;
   font-size: 1.25rem;
   font-weight: 700;
-  margin-bottom: 0.25rem;
   color: var(--text-dark);
+  margin-bottom: 0.25rem;
 }
 
 .timeline-company {
