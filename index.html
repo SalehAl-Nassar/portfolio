@@ -242,35 +242,59 @@
   </section>
 
   <!-- Contact Section -->
-  <section id="contact" class="section contact-section">
-    <div class="container">
-      <h2 class="section-title">05 — Contact</h2>
+   <div class="contact-content fade-up">
+        <div class="contact-left">
+          <h3>Get in Touch</h3>
+          <p class="contact-intro">Whether you have a project in mind, a question, or just want to connect — I'd love to hear from you.</p>
 
-      <div class="contact-content fade-up">
-        <p class="contact-intro">Have a project in mind or want to collaborate? I'd love to hear from you.</p>
+          <div class="contact-info">
+            <div class="info-row">
+              <div class="info-icon">✉</div>
+              <div class="info-text">
+                <small>Email</small>
+                <a href="mailto:salehalnassar456@gmail.com">salehalnassar456@gmail.com</a>
+              </div>
+            </div>
+
+            <div class="info-row">
+              <div class="info-icon">in</div>
+              <div class="info-text">
+                <small>LinkedIn</small>
+                <a href="https://www.linkedin.com/in/saleh-al-nassar" target="_blank">Saleh Al Nassar</a>
+              </div>
+            </div>
+
+            <div class="info-row">
+              <div class="info-icon">☎</div>
+              <div class="info-text">
+                <small>Phone</small>
+                <span>81-925421</span>
+              </div>
+            </div>
+          </div>
+        </div>
 
         <form class="contact-form" onsubmit="handleContactForm(event)">
-          <div class="form-group">
-            <input type="text" placeholder="Your Name" required />
-          </div>
-          <div class="form-group">
-            <input type="email" placeholder="Your Email" required />
-          </div>
-          <div class="form-group">
-            <textarea placeholder="Your Message" rows="5" required></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary">Send Message</button>
-        </form>
+          <div class="form-grid">
+            <div class="field">
+              <label>NAME</label>
+              <input type="text" placeholder="Your full name" required>
+            </div>
 
-        <p class="contact-note">Or reach out directly:</p>
-        <div class="contact-links">
-          <a href="mailto:salehalnassar456@gmail.com" class="contact-link-large">📧 Email</a>
-          <a href="https://www.linkedin.com/in/saleh-al-nassar" target="_blank" rel="noopener" class="contact-link-large">🔗 LinkedIn</a>
-          <a href="https://github.com/SalehAl-Nassar" target="_blank" rel="noopener" class="contact-link-large">💻 GitHub</a>
-        </div>
+            <div class="field">
+              <label>EMAIL</label>
+              <input type="email" placeholder="your@email.com" required>
+            </div>
+
+            <div class="field">
+              <label>MESSAGE</label>
+              <textarea placeholder="Tell me about your project or inquiry..." rows="6" required></textarea>
+            </div>
+
+            <button type="submit" class="contact-send">Send Message</button>
+          </div>
+        </form>
       </div>
-    </div>
-  </section>
 
   <!-- Footer -->
   <footer class="footer">
